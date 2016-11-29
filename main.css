@@ -1,0 +1,50 @@
+﻿#ModalOpen {
+    position: center;
+    padding: 0px !important;
+}
+
+.modal #map_container {
+    position: inherit;
+    padding-top: 50%;
+}
+
+#ul {
+    padding: 0;
+    width: 120px;
+    padding-left: 4%;
+}
+
+li {
+    font-family:"Century";
+}
+
+#map {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+button {
+    padding-left: 3%;
+    width: 125px;
+    background-color: #fff;
+}
+
+p {
+    Лmargin: 3px 0px 0px 0px !important;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+    margin: 3%;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#marker {
+    width: 30px;
+    height: 30px;
+}
+

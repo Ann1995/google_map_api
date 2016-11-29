@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="Content/animate.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-select.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap-select.js"></script>
+    <script src="modal.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAakFmLEuXXQb2omqqo4CApb-D3u745ST0&callback=initMap">
+    </script>
+</head>
+<body>
+    <h1 class="text-info animated zoomIn">Наші магазини на карті</h1>
+    <button href="#ModalOpen" id="btnOpen" class="btn-info" data-toggle="modal">Подивитись</button>
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="ModalOpen">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <img id="marker" src="marker.png" />
+                            <h3>
+                                Магазини <br />
+                                поруч
+                            </h3>
+                            <button class="btn btn-default" onclick="findNearest()">найближчий</button>
+                            <p>Оберіть місто</p>
+                            <div class="dropdown" id="select">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                    місто
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li value="1"><a href="#">Київ</a></li>
+                                    <li value="2"><a href="#">Львів</a></li>
+                                    <li value="3"><a href="#">Одеса</a></li>
+                                </ul>
+                            </div>
+                            <ul id="ul"></ul>
+                        </div>
+                        <div id="map" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <div id="map_container">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
